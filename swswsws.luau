@@ -1,5 +1,3 @@
-
-local module = {}
 local u1 = game:GetService("UserInputService")
 local u2 = require(game.ReplicatedStorage.Modules.UnitsData)
 local u3 = game.Players.LocalPlayer
@@ -57,7 +55,9 @@ local function BodyVelocityLook(p14, p15, p16)
         u3.Character.HumanoidRootPart.CFrame = CFrame.new(u3.Character.HumanoidRootPart.Position, v26)
     end
 end
-function module:Combat()
+
+
+function Combat()
     --[[
     Upvalues:
         [1] = u3
@@ -134,4 +134,8 @@ function module:Combat()
     end
 end
 
-return module
+local CombateModule = {
+    Combat
+}
+
+return CombateModule
