@@ -1,3 +1,5 @@
+local CombateModule = {}
+CombateModule.__index = CombateModule
 local u1 = game:GetService("UserInputService")
 local u2 = require(game.ReplicatedStorage.Modules.UnitsData)
 local u3 = game.Players.LocalPlayer
@@ -57,7 +59,7 @@ local function BodyVelocityLook(p14, p15, p16)
 end
 
 
-function Combat()
+function CombateModule:Combat()
     --[[
     Upvalues:
         [1] = u3
@@ -134,8 +136,6 @@ function Combat()
     end
 end
 
-local CombateModule = {
-    Combat
-}
+
 
 return CombateModule
